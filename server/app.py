@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from dotenv import load_dotenv
 from pathlib import Path
 import os
-from gpt_handler import ask_jason
+from core.gpt_handler import ask_jason
 from handlers.ultramsg_handler import send_whatsapp_message
 
 load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent / "config" / ".env")
