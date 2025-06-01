@@ -2,6 +2,11 @@ from flask import Flask, request, jsonify
 from dotenv import load_dotenv
 from pathlib import Path
 import os
+import sys
+
+# ➕ Tilføj root-mappen til importstien
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
 from core.gpt_handler import ask_jason
 from handlers.ultramsg_handler import send_whatsapp_message
 
