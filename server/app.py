@@ -31,10 +31,10 @@ def webhook():
     send_whatsapp_message(sender, jason_reply)
     return jsonify({"status": "success", "message": jason_reply})
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5050)
-
 @app.route('/', methods=['GET'])
 def root():
     return jsonify({"status": "ok", "message": "Jason Supreme is running"}), 200
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5050)
 
