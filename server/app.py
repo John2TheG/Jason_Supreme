@@ -33,3 +33,8 @@ def webhook():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5050)
+
+@app.route('/', methods=['GET'])
+def root():
+    return jsonify({"status": "ok", "message": "Jason Supreme is running"}), 200
+
