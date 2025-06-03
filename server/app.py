@@ -11,7 +11,7 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 from server.webhook import webhook  # indeholder GET /webhook (verify)
 from core.gpt_handler import ask_jason
-from handlers.ultramsg_handler import send_whatsapp_message
+from handlers.whatsapp_graph_handler import send_whatsapp_message
 
 # Registrér GET /webhook route
 app.register_blueprint(webhook)
@@ -50,3 +50,4 @@ def root():
 # 🔥 Run local server
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5050)
+
